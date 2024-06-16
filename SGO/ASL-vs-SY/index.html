@@ -17,7 +17,7 @@
 	</head>
 	
 	<body class="stackedit__html">
-		<label id="modifiedDate"></label>
+		
 		<script>
 			fetch('overall-stats.png').then(response => {
 				var lastModified = new Date(response.headers.get('Last-Modified'));
@@ -33,7 +33,7 @@
 		</div>
 		
 		<table>
-			<tr align="top">
+			<tr>
 				<td>
 					<h2>Overall Stats</h2>
 					<img src="overall-stats.png"/>
@@ -43,8 +43,13 @@
 					<img src="player-stats.png"/>
 				</td>
 			</tr>
+			<tr>
+				<td align="center" colspan="2">
+					<label id="modifiedDate"></label>
+				</td>
+			</tr>
 		</table>
-	
+		
 	</body>
 	
 </html>
