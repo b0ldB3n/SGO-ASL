@@ -1,21 +1,50 @@
 <html>
-<head>
-	<title>Scrabble GO - ASL vs SY battle</title>
-	<link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
-<body class="stackedit__html">
-	<label id="modifiedDate"></label>
-    <script>
-        fetch('overall-stats.png').then(response => {
-            var lastModified = new Date(response.headers.get('Last-Modified'));
-            document.getElementById('modifiedDate').textContent = 'Last Update: ' + lastModified.toLocaleString();
-        });
-    </script>
+
+	<head>
+		<title>Scrabble GO - ASL vs SY battle</title>
+		<link rel="stylesheet" href="https://stackedit.io/style.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+		<style>
+			img {
+				transform: scale(1);
+			}
+			
+			td {
+				vertical-align: top;
+			}
+		</style>
+	</head>
 	
+	<body class="stackedit__html">
+		<label id="modifiedDate"></label>
+		<script>
+			fetch('overall-stats.png').then(response => {
+				var lastModified = new Date(response.headers.get('Last-Modified'));
+				document.getElementById('modifiedDate').textContent = 'Last Update: ' + lastModified.toLocaleString();
+			});
+		</script>
+		
+		<div class="container" style="font-size:18px">
+		<span class="scrabble animate" style="--n:25"><span>SCRABBLE GO - ROOM BATTLE</span></span>
+		</div>
+		<div class="container" style="font-size:44px">
+		<span class="scrabble"><span>ASL vs SY</span></span>
+		</div>
+		
+		<table>
+			<tr align="top">
+				<td>
+					<h2>Overall Stats</h2>
+					<img src="overall-stats.png"/>
+				</td>
+				<td>
+					<h2>Player Stats</h2>
+					<img src="player-stats.png"/>
+				</td>
+			</tr>
+		</table>
 	
-	<h1>Overall Stats</h1>
-	<img src="overall-stats.png"/>
-	<h1>Player Stats</h1>
-	<img src="player-stats.png"/>
-</body>
+	</body>
+	
 </html>
