@@ -9,7 +9,7 @@
     <script>
         fetch('overall-stats.png').then(response => {
             var lastModified = new Date(response.headers.get('Last-Modified'));
-            document.getElementById('modifiedDate').textContent = 'Last Updated: ' + lastModified.toLocaleString();
+            document.getElementById('modifiedDate').textContent = 'Last Update: ' + lastModified.toLocaleString();
         });
     </script>
 	
