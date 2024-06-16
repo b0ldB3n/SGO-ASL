@@ -1,9 +1,19 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Scrabble GO - ASL vs SY battle</title>
 	<link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 <body class="stackedit__html">
+	<label id="modifiedDate">Date:</label>
+    <script>
+        fetch('overall-stats.png').then(response => {
+            var lastModified = response.headers.get('Last-Modified');
+            document.getElementById('modifiedDate').textContent = 'Last Modified: ' + lastModified;
+        });
+    </script>
+	
+	
 	<h1>Overall Stats</h1>
 	<img src="overall-stats.png"/>
 	<h1>Player Stats</h1>
