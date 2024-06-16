@@ -5,11 +5,11 @@
 	<link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 <body class="stackedit__html">
-	<label id="modifiedDate">Date:</label>
+	<label id="modifiedDate"/>
     <script>
         fetch('overall-stats.png').then(response => {
-            var lastModified = response.headers.get('Last-Modified');
-            document.getElementById('modifiedDate').textContent = 'Last Modified: ' + lastModified;
+            var lastModified = new Date(response.headers.get('Last-Modified'));
+            document.getElementById('modifiedDate').textContent = 'Last Updated: ' + lastModified.toLocaleString();
         });
     </script>
 	
